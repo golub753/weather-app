@@ -8,9 +8,17 @@ body {
     background: #f6e0bc;
     /* dark */
     /* background: #091F43; */
+    font-family: 'Heebo', sans-serif;
 }
 .App {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px 0;
+}
+
+.form-weather {
+    display: flex;
+    align-items: flex-end;
+    grid-column-gap: 11px;
+    margin-bottom: 30px;
 }
