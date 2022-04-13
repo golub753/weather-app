@@ -10,7 +10,7 @@ const WeatherItem = ({item}) => {
                     {item.degree}
                     <div className="post-cels">℃</div>
                 </div>
-                <img src={`/images/${item.icon}.svg`} alt=""/>
+                <img src={`/weather-app/images/${item.icon}.svg`} alt=""/>
                 <div className="post-description">{item.weather}</div>
             </div>
         </div>
