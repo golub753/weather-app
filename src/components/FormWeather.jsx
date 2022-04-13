@@ -1,10 +1,21 @@
+import { useState } from "react";
 import MyButton from "../UI/button/MyButton";
 import MyInput from "../UI/input/MyInput";
 
-const FormWeather = (props) => {
+const FormWeather = ({getCity}) => {
+    const [city, setCity] = useState('');
+    const submit = e => {
+        e.preventDefault();
+        getCity(city);
+        setCity('');
+    }
     return ( 
-        <form className="form-weather">
-            <MyInput placeholder="Search for a city"/>
+        <form onSubmit={submit} className="form-weather">
+            <MyInput 
+                value={city}
+                placeholder="Search for a city"
+                onChange={(e) => setCity(e.target.value)}
+            />
             <MyButton>submit</MyButton>
         </form>
      );

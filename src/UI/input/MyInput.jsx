@@ -1,8 +1,8 @@
 import cl from './MyInput.module.css';
 
-const MyInput = ({placeholder}) => {
+const MyInput = (props) => {
     return ( 
-        <input placeholder={placeholder} className={cl.myInput}/>
+        <input className={cl.myInput} {...props}/>
      );
 }
  
