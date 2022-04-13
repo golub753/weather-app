@@ -30,17 +30,32 @@ body {
     grid-gap: 35px;
 }
 
-.weather-item {
+.post {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(41, 69, 105, 0.6);
     border-radius: 10px;
 }
 
-.weather-item-wrapper {
+.post-enter {
+    opacity: 0;
+}
+.post-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.post-wrapper {
     padding: 15px;
 }
 
-.weather-item-name {
+.post-name {
     display: inline-block;
     position: relative;
     font-weight: 400;
@@ -50,7 +65,7 @@ body {
     margin-bottom: 10px;
 }
 
-.weather-item-name-after {
+.post-name-after {
     position: absolute;
     width: 26px;
     height: 17px;
@@ -66,7 +81,7 @@ body {
     top: -7px;
 }
 
-.weather-item-number {
+.post-number {
     display: block;
     width: fit-content;
     position: relative;
@@ -76,7 +91,7 @@ body {
     color: #294569;
 }
 
-.weather-item-cels {
+.post-cels {
     font-weight: 500;
     font-size: 29px;
     line-height: 37px;
@@ -86,13 +101,13 @@ body {
     top: 8px;
 }
 
-.weather-item img {
+.post img {
     width: 40px;
     height: 40px;
     margin-bottom: 13px;
 }
 
-.weather-item-description {
+.post-description {
     font-weight: 400;
     font-size: 14px;
     line-height: 15px;

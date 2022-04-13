@@ -1,17 +1,17 @@
 const WeatherItem = ({item}) => {
     return ( 
-        <div className="weather-item">
-            <div className="weather-item-wrapper">
-                <div className="weather-item-name">
+        <div className="post">
+            <div className="post-wrapper">
+                <div className="post-name">
                     {item.city}
-                    <div className="weather-item-name-after">{item.country}</div>
+                    <div className="post-name-after">{item.country}</div>
                 </div>
-                <div className="weather-item-number">
+                <div className="post-number">
                     {item.degree}
-                    <div className="weather-item-cels">℃</div>
+                    <div className="post-cels">℃</div>
                 </div>
                 <img src={`/images/${item.icon}.svg`} alt=""/>
-                <div className="weather-item-description">{item.weather}</div>
+                <div className="post-description">{item.weather}</div>
             </div>
         </div>
      );

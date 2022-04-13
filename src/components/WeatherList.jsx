@@ -1,15 +1,21 @@
 import WeatherItem from "./WeatherItem";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const WeatherList = ({data}) => {
     return ( 
-        <div className="weather-list">
-            {data.map(item => {
-                return <WeatherItem 
-                                    key={item.id}
-                                    item={item}
-                                    />
-            })}
-        </div>
+        <TransitionGroup className="weather-list">
+            {data.map(item => 
+                    <CSSTransition
+                        key={item.id}
+                        timeout={500}
+                        classNames='post'
+                    >
+                        <WeatherItem 
+                                        item={item}
+                                        />
+                    </CSSTransition>)
+            }
+        </TransitionGroup>
      );
 }
  
