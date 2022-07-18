@@ -1,16 +1,15 @@
 import axios from "axios";
 
 export default class GetWeather {
-    static async getAll(city) {
-        const response = await axios.get('https://community-open-weather-map.p.rapidapi.com/weather', {
-            params: {
-                q: city
-            },
-            headers: {
-                'X-RapidAPI-Host': 'community-open-weather-map.p.rapidapi.com',
-                'X-RapidAPI-Key': '650094388cmsh8c5786fe394148bp10fba0jsn30934f6321ff'
-            }
-        })
-        return response.data;
-    }
+    // static async getAll(lat, lng) {
+    //     const response = await axios.request(
+    //         {
+    //             method: 'GET',
+    //             url: 'https://api.ambeedata.com/weather/latest/by-lat-lng',
+    //             params: {lat: lat, lng: lng},
+    //             headers: {'x-api-key': '7646d287c04f3a01b311093b55e6663f7ade9304cc3b419072ef2b934c592125', 'Content-type': 'application/json'}
+    //           }
+    //     )
+    //     return response.data;
+    // }
 }
